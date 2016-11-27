@@ -1,0 +1,23 @@
+
+# html lang
+language: en
+
+# main menu navigation
+menu:
+  Home: /
+  About: /about
+  Contact: /contact
+  Archives: /archives
+
+# Miscelaneous
+favicon: /favicon.ico
+
+# stylesheets loaded in the <head>
+stylesheets:
+- https://yui-s.yahooapis.com/pure/0.6.0/pure-min.css
+- https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,400i
+- /css/tradition.css
+
+# scripts loaded in the end of the body
+scripts:
+- /js/tradition.js

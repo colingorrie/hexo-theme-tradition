@@ -1,0 +1,11 @@
+@import "variables";
+@import "_components/all";
+
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+  font-family: $serif;
+}
+
+body {
+  line-height: 1.777;
+}
