@@ -4,8 +4,10 @@
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"] {
   font-family: $serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
+  color: $dark-grey;
   line-height: 1.777;
 }

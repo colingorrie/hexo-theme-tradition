@@ -1,16 +1,32 @@
 
 {% if site.posts.length > 0 %}
-  <div id="recent-posts">
-    <h1>All Posts</h1>
+  <div id="recent-posts" class="RecentPosts">
+    <header class="RecentPosts__header">
+      <h1 class="RecentPosts__title">All Posts</h1>
+    </header>
     {% for postItem in site.posts.toArray() %}
-      <div class="recent-post-item">
-        <a href="{{ config.root }}{{ postItem.path }}">{{ postItem.title }}</a>
-        {% if postItem.date %}
-          <time datetime="{{ postItem.date.toJSON() }}">
-            {{ date(postItem.date) }}
-          </time>
+      <article class="recent-post-item PostExcerpt">
+        <header class="PostExcerpt__header">
+          <a href="{{ config.root }}{{ postItem.path }}" class="PostExcerpt__title">{{ postItem.title }}</a>
+        </header>
+        <div class="PostExcerpt__meta">
+          {% if postItem.date %}
+            <time datetime="{{ postItem.date.toJSON() }}" class="PostExcerpt__date">
+              {{ date(postItem.date) }}
+            </time>
+          {% endif %}
+          {% if postItem.author %}
+            <span class="PostExcerpt__author">
+              by {{postItem.author}}
+            </span>
+          {% endif %}
+        </div>
+        {% if postItem.excerpt %}
+          <div class="PostExcerpt__excerpt">
+            {{ postItem.excerpt }} <a href="{{ config.root }}{{ postItem.path }}" class="PostExcerpt__readMore">Continue Reading</a> »
+          </div>
         {% endif %}
-      </div>
+      </article>
     {% endfor %}
   </div>
 {% endif %}

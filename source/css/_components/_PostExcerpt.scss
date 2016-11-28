@@ -1,0 +1,35 @@
+.PostExcerpt {
+  border-bottom: .1em solid $light-grey;
+  margin-bottom: 1em;
+  margin-top: 0.5em;
+  padding-bottom: 1em;
+
+  &__title {
+    color: $dark-red;
+    font-size: 1.3em;
+    line-height: 1.5;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  &__date, &__author {
+    font-style: italic;
+    font-size: 0.888em;
+    letter-spacing: 0;
+    margin: .2em 0 .5em;
+  }
+
+  &__excerpt {
+    margin-bottom: 1.5em;
+  }
+
+  &__readMore {
+    color: $dark-red;
+    font-style: italic;
+    text-decoration: none;
+  }
+
+  @media #{$tablet} {
+    padding: 1em 30px;
+  }
+}

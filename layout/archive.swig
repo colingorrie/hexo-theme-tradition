@@ -6,8 +6,10 @@
   {% set archivesList = list_archives({ show_count: false }) %}
 
   {% if !is_year() %}
-    <div id="archive">
-      <h1>Archives</h1>
+    <div id="archive" class="Archive">
+      <header class="Archive__header">
+        <h1 class="Archive__title">Archives</h1>
+      </header>
       {% if theme.atom %}
         <p>
           The feed is available via
