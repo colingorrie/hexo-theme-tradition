@@ -1,4 +1,25 @@
 .Menu {
+  background-color: $light-grey;
   font-family: $sans !important;
   text-transform: uppercase;
+  width: 100%;
+
+  .pure-menu-item:hover {
+
+    a {
+      background-color: darken($light-grey, 10%);
+    }
+  }
+
+  &--horizontal {
+
+    .pure-menu {
+      text-align: center;
+    }
+
+    ul {
+      display: flex;
+      justify-content: center;
+    } 
+  }
 }
