@@ -11,9 +11,10 @@
 
     li {
       display: inline;
+      margin-left: 0.5em;
 
       &:after {
-        content: ", ";
+        content: ",";
       }
 
       &:last-child:after {
@@ -29,6 +30,7 @@
 
   &__title {
     font-style: italic;
+    margin-right: 0.5em;
   }
 
 }
