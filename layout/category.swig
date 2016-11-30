@@ -1,8 +1,10 @@
 {% extends 'includes/layout.swig' %}
 
 {% block body %}
-  <div id="category">
-    <h1>{{ page.category }}</h1>
+  <div id="category" class="Category">
+    <div class="Category__header">
+      <h1 class="Category__title">{{ page.category }}</h1>
+    </div>
     {% for postItem in page.posts.toArray() %}
       <div class="category-item">
         {% if postItem.link %}

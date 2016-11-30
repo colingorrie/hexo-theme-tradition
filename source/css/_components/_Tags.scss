@@ -1,0 +1,34 @@
+.Tags {
+
+  &__list {
+    display: inline;
+    font-family: $sans;
+    font-size: 0.8em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+
+    li {
+      display: inline;
+
+      &:after {
+        content: ", ";
+      }
+
+      &:last-child:after {
+        content: "";
+      }
+
+      a {
+        text-decoration: none;
+        color: $dark-red;
+      }
+    }
+  }
+
+  &__title {
+    font-style: italic;
+  }
+
+}
