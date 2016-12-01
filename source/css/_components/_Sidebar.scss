@@ -1,0 +1,8 @@
+.Sidebar {
+
+  @media #{$tablet} {
+    float: right;
+    width: 25%;
+  }
+  
+}

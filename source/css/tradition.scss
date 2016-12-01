@@ -3,7 +3,6 @@
 @import "pure-hidden";
 @import "_components/all";
 
-
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"] {
   font-family: $serif;
@@ -12,9 +11,23 @@ html, button, input, select, textarea,
 
 body {
   color: $dark-grey;
-  line-height: 1.777;
+  font-variant-numeric: oldstyle-nums;       /* <numeric-figure-values> */
+  font-size: 20px;
+  letter-spacing: 0.25px;
+  line-height: 1.6;
+  margin-bottom: 3em;
 }
 
 .hidden {
   display: none;
+}
+
+a {
+  color: $dark-red;
+  text-decoration: none;
+}
+
+blockquote {
+  margin: 1.5em auto; 
+  width: 80%;
 }

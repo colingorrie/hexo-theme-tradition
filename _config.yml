@@ -16,7 +16,7 @@ favicon: /favicon.ico
 stylesheets:
 - https://yui-s.yahooapis.com/pure/0.6.0/pure-min.css
 - https://yui-s.yahooapis.com/pure/0.6.0/grids-responsive-min.css
-- https://fonts.googleapis.com/css?family=Open+Sans|Sorts+Mill+Goudy:400,400i
+- https://fonts.googleapis.com/css?family=Reem+Kufi|Crimson+Text:400,400i|Sorts+Mill+Goudy:400,400i
 - /css/tradition.css
 
 # scripts loaded in the end of the body

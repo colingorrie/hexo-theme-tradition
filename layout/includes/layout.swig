@@ -44,7 +44,7 @@
 </div>
 
 <div class="pure-g">
-  <div id="content-outer" class="pure-u-1 pure-u-md-3-4 pure-u-xl-1-2 Main">
+  <div id="content-outer" class="pure-u-1 pure-u-md-3-4 Main">
     <div id="content-inner" class="">
       {# {% autoescape false %}{{ body }}{% endautoescape %} #}
       {% block body %}{% endblock %}

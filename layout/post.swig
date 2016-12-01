@@ -2,10 +2,21 @@
 
 {% block body %}
   <article id="post" class="Post">
-    <div class="Post__header">
+    <header class="Post__header">
       <h1 class="Post__title">{{ page.title }}</h1>
+      <p class="Post__author">{{ page.author }}</p>
+      <p class="Post__date">
+        <time datetime="{{ date_xml(page.date) }}">
+          {{ date(page.date) }}
+        </time>
+      </p>
+    </header>
+    <div class="Post__body">
+      <div class="Post__content">
+      {% autoescape false %}{{ page.content }}{% endautoescape %}
+      </div>
+      {% include 'includes/sidebar.swig' %}
     </div>
-    {% autoescape false %}{{ page.content }}{% endautoescape %}
   </article>
 
   {% include 'includes/tags.swig' %}
