@@ -6,14 +6,13 @@
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"] {
   font-family: $serif;
-  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.1px;
+  // -webkit-font-smoothing: antialiased;
 }
 
 body {
   color: $dark-grey;
-  font-variant-numeric: oldstyle-nums;       /* <numeric-figure-values> */
   font-size: 20px;
-  letter-spacing: 0.25px;
   line-height: 1.6;
   margin-bottom: 3em;
 }
