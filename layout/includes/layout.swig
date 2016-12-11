@@ -46,6 +46,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1.0">
+  <meta name="google-site-verification" content="SOOHSO4IRtvQ7XkQBzsO65xpbhnGpaoFHPBcm4EGyds" />
   <title>{{ pageTitle }}</title>
   {% include "opengraph.swig" %}
   {% if theme.stylesheets !== undefined && theme.stylesheets.length > 0 %}
@@ -54,6 +55,7 @@
       <link rel="stylesheet" href="{{ url }}">
     {% endfor %}
   {% endif %}
+  {% include "google_analytics.swig" %}
 </head>
 <body>
 
@@ -86,7 +88,7 @@
   {% endfor %}
 {% endif %}
 
-{% if theme.disqus_shortname %}
+{% if theme.disqus_shortname && page.is_post() %}
   <script type="text/javascript">
     var disqus_shortname = '{{ theme.disqus_shortname }}';
 

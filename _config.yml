@@ -31,3 +31,6 @@ scripts:
 
 # disqus
 disqus_shortname: cfgorrie
+
+# google analytics
+google_analytics: UA-21650974-6
