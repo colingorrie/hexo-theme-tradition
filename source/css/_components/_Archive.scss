@@ -7,6 +7,10 @@
     @include page-body();
   }
 
+  &__content {
+    @include page-content();
+  }
+
   &__typeTitle {
     font-size: 1.777em;
   }

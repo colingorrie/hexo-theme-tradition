@@ -2,4 +2,12 @@
   &__header {
     @include archive-header();
   }
+
+  &__body {
+    @include page-body();
+  }
+
+  &__content {
+    @include page-content();
+  }
 }

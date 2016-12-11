@@ -14,12 +14,12 @@
     <div class="Post__body">
       <div class="Post__content">
         {% autoescape false %}{{ page.content }}{% endautoescape %}
+        {% include 'includes/tags.swig' %}
+        {% include 'includes/pagination.swig' %}
       </div>
       {% include 'includes/sidebar.swig' %}
     </div>
   </article>
 
-  {% include 'includes/tags.swig' %}
 
-  {% include 'includes/pagination.swig' %}
 {% endblock %}

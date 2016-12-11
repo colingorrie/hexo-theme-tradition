@@ -30,6 +30,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1.0">
   <title>{{ pageTitle }}</title>
+  {% include "opengraph.swig" %}
   {% if theme.stylesheets !== undefined && theme.stylesheets.length > 0 %}
     {# stylesheet list from config.yml #}
     {% for url in theme.stylesheets %}

@@ -22,7 +22,7 @@
         </time>
       </div>
     {% endfor %}
+    {% include 'includes/pagination.swig' %}
   </div>
 
-  {% include 'includes/pagination.swig' %}
 {% endblock %}
