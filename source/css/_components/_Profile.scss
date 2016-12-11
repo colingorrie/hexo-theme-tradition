@@ -1,22 +1,39 @@
 .Profile {
   text-align: center;
 
-  &__title {
-    font-size: 1.5em;
-    margin: 0;
+  &__description {
+    line-height: 1.3;
+    font-style: italic;
+    margin: 0 0 5px 0;
+    // font-size: 0.9em;
   }
 
   &__image {
     border-radius: 50%;
     display: block;
     height: auto;
-    margin: 0 auto;
-    max-width: 90%;
+    margin: 0 auto 5px;
+    max-width: 80%;
+  }
+
+  &__name {
+    font-size: 1.5em;
+    margin: 0 0 5px 0;
   }
 
   &__socialLinks {
+    margin: 0 0 5px 0;
+
     li {
       list-style-type: none;
     }
+  }
+
+  &__title {
+    font-family: $sans;
+    font-size: 1em;
+    line-height: 1.2;
+    margin: 0 0 14px 0;
+    text-transform: uppercase;
   }
 }
