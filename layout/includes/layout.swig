@@ -54,10 +54,7 @@
 
   <div id="bottom-outer" class="pure-u-1">
     <div id="bottom-inner" class="Footer">
-      Site by {{ config.author }} using
-      <a href="http://hexo.io">hexo blog framework</a>.
-      <br>
-      <a href="{{ config.root }}">Home</a>
+      &copy; 2016 {{ config.author }} 
     </div>
   </div>
 
