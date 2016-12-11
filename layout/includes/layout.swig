@@ -3,22 +3,39 @@
 
 {% if is_archive() %}
   {% set pageTitle = 'Archives' %}
+  {% set className = "Archive" %}
 {% endif %}
 
 {% if is_tag() %}
   {% set pageTitle = 'Tag: ' + page.tag %}
+  {% set className = "Tag" %}
 {% endif %}
 
 {% if is_category() %}
   {% set pageTitle = 'Category: ' + page.category %}
+  {% set className = "Category" %}
 {% endif %}
 
 {% if is_month() %}
   {% set pageTitle = pageTitle + ': ' + page.month + '/' + page.year %}
+  {% set className = "Archive" %}
 {% endif %}
 
 {% if is_year() %}
   {% set pageTitle = pageTitle + ': ' + page.year %}
+  {% set className = "Archive" %}
+{% endif %}
+
+{% if is_post() %}
+  {% set className = "Post" %}
+{% endif %}
+
+{% if is_page() %}
+  {% set className = "Page" %}
+{% endif %}
+
+{% if is_home() %}
+  {% set className = "RecentPosts" %}
 {% endif %}
 
 {% set pageTitle = pageTitle + ' [ ' + config.title + ' ]' %}
@@ -45,19 +62,21 @@
 </div>
 
 <div class="pure-g">
-  <div id="content-outer" class="pure-u-1 pure-u-md-3-4 Main">
-    <div id="content-inner" class="">
-      {# {% autoescape false %}{{ body }}{% endautoescape %} #}
-      {% block body %}{% endblock %}
+  <div class="pure-u-1 pure-u-md-3-4 Main">
+    <div class="{{ className }}">
+      {% block header %}{% endblock %}
+      <div class="{{ className }}__body">
+        <div class="{{ className }}__content">
+          {% block body %}{% endblock %}
+        </div>
+        {% include 'sidebar.swig' %}
+      </div>
     </div>
   </div>
 
-  <div id="bottom-outer" class="pure-u-1">
-    <div id="bottom-inner" class="Footer">
-      &copy; 2016 {{ config.author }} 
-    </div>
+  <div id="bottom-outer" class="pure-u-1 Footer">
+    &copy; 2016 {{ config.author }} 
   </div>
-
 </div>
 
 {% if theme.scripts !== undefined && theme.scripts.length > 0 %}
