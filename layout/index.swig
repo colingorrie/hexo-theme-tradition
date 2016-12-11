@@ -1,8 +1,8 @@
 {% extends 'includes/layout.swig' %}
 
 {% block header %}
-  <header class="RecentPosts__header">
-    <h1 class="RecentPosts__title">Blog</h1>
+  <header class="Index__header">
+    <h1 class="Index__title">{{ config.title }}</h1>
   </header>
 {% endblock %}
 

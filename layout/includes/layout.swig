@@ -35,7 +35,7 @@
 {% endif %}
 
 {% if is_home() %}
-  {% set className = "RecentPosts" %}
+  {% set className = "Index" %}
 {% endif %}
 
 {% set pageTitle = pageTitle + ' [ ' + config.title + ' ]' %}

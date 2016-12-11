@@ -18,7 +18,6 @@ body {
   margin-bottom: 3em;
 }
 
-
 a {
   color: $dark-red;
   text-decoration: none;
@@ -26,4 +25,27 @@ a {
 
 .hidden {
   display: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $sans;
+  line-height: 1.2;
+  margin-bottom: 0.2em;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 3.157em;
+}
+
+h2 {
+  font-size: 2.369em;
+}
+
+h3 {
+  font-size: 1.777em;
+}
+
+h4 {
+  font-size: 1.333em;
 }

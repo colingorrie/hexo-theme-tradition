@@ -1,6 +1,6 @@
-.RecentPosts {
+.Index {
   &__header {
-    @include section-header();
+    @include archive-header();
   }
 
   &__body {

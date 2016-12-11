@@ -1,4 +1,8 @@
 {% if site.posts.length > 0 %}
+  <header class="RecentPosts__header">
+    <h2 class="RecentPosts__title">Recent Posts</h1>
+  </header>
+
   {% for postItem in site.posts.toArray() %}
     <article class="recent-post-item PostExcerpt">
       <header class="PostExcerpt__header">
