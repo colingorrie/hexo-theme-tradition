@@ -17,3 +17,18 @@
     margin: 0;
   }
 }
+
+@mixin page-body() {
+  margin-top: 1.5em;
+
+  @media #{$desktop} {
+    display: flex;
+  }
+}
+
+@mixin page-content() {
+  @media #{$desktop} {
+    flex: 3;
+    padding: 1em 30px;
+  }
+}

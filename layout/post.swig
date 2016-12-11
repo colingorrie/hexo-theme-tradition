@@ -13,7 +13,7 @@
     </header>
     <div class="Post__body">
       <div class="Post__content">
-      {% autoescape false %}{{ page.content }}{% endautoescape %}
+        {% autoescape false %}{{ page.content }}{% endautoescape %}
       </div>
       {% include 'includes/sidebar.swig' %}
     </div>

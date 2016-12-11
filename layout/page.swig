@@ -2,10 +2,15 @@
 
 {% block body %}
   <article id="page" class="Page">
-    <div class="Page__header">
+    <header class="Page__header">
       <h1 class="Page__title">{{ page.title }}</h1>
+    </header>
+    <div class="Page__body">
+      <div class="Page__content">
+        {% autoescape false %}{{ page.content }}{% endautoescape %}
+      </div>
+      {% include 'includes/sidebar.swig' %}
     </div>
-    {% autoescape false %}{{ page.content }}{% endautoescape %}
   </article>
 
   {% include 'includes/pagination.swig' %}

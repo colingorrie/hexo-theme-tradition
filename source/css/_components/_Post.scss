@@ -47,21 +47,10 @@
   }
 
   &__body {
-    margin-top: 1.5em;
-
-    @media #{$desktop} {
-      display: flex;
-      // padding: 1em 30px;
-    }
+    @include page-body();
   }
 
   &__content {
-    // float: left;
-    // width: 75%;
-
-    @media #{$desktop} {
-      flex: 3;
-      padding: 1em 30px;
-    }
+    @include page-content();
   }
 }
