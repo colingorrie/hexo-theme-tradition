@@ -1,6 +1,7 @@
 @mixin archive-header() {
   background-color: $dark-red;
   color: $white;
+  font-family: $sans;
   padding: 0.7em 0 0.4em;
   text-align: center;
   text-transform: uppercase;
@@ -11,6 +12,8 @@
   }
 
   h1 {
+    // margin: 0.67em 0;
+    font-size: 2em;
     margin: 0;
   }
 }
