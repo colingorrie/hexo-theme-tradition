@@ -1,4 +1,3 @@
-
 # html lang
 language: en
 
@@ -29,3 +28,6 @@ stylesheets:
 # scripts loaded in the end of the body
 scripts:
 - /js/tradition.js
+
+# disqus
+disqus_shortname: cfgorrie

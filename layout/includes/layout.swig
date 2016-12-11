@@ -86,5 +86,19 @@
   {% endfor %}
 {% endif %}
 
+{% if theme.disqus_shortname %}
+  <script type="text/javascript">
+    var disqus_shortname = '{{ theme.disqus_shortname }}';
+
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/{% if page.comments %}embed.js{% else %}count.js{% endif %}';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+  </script>
+{% endif %}
+
 </body>
 </html>

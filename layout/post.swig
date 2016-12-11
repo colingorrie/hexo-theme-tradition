@@ -17,4 +17,5 @@
   {% autoescape false %}{{ page.content }}{% endautoescape %}
   {% include 'includes/tags.swig' %}
   {% include 'includes/pagination.swig' %}
+  {% include 'includes/comments.swig' %}
 {% endblock %}
