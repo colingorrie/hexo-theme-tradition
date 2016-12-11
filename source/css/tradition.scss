@@ -84,3 +84,16 @@ pre, .highlight {
     display: none;
   }
 }
+
+.chinese {
+  font-size: 20px;
+  line-height: 1.7;
+  // margin-bottom: 0.5em;
+  text-align: justify;
+  ms-text-justify: inter-ideograph;
+  word-break: break-all;
+
+  em {
+    font-style: normal;
+  }
+}
