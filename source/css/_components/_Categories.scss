@@ -1,0 +1,39 @@
+.Categories {
+
+  margin-bottom: 1em;
+
+  &__list {
+    display: inline;
+    font-family: $sans;
+    font-size: 0.8em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+
+    li {
+      display: inline;
+      margin-left: 0.5em;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:after {
+        content: ",";
+      }
+
+      &:last-child:after {
+        content: "";
+      }
+
+      a {
+        border-bottom: 1px dotted $dark-grey;
+        text-decoration: none;
+        // color: $dark-red;
+        color: $dark-grey;
+      }
+    }
+  }
+
+}

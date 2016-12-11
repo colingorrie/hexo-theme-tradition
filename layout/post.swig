@@ -13,6 +13,7 @@
     </header>
     <div class="Post__body">
       <div class="Post__content">
+        {% include 'includes/categories.swig' %}
         {% autoescape false %}{{ page.content }}{% endautoescape %}
         {% include 'includes/tags.swig' %}
         {% include 'includes/pagination.swig' %}
