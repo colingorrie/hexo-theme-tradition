@@ -10,74 +10,84 @@
       <header class="Archive__header">
         <h1 class="Archive__title">Archives</h1>
       </header>
-      {% if theme.atom %}
-        <p>
-          The feed is available via
-          <a href="{{ theme.atom }}">atom</a>.
-        </p>
-        <br>
-      {% endif %}
+      <div class="Archive__body">
+        <div class="Archive__content">
+          {% if theme.atom %}
+            <p>
+              The feed is available via
+              <a href="{{ theme.atom }}">atom</a>.
+            </p>
+            <br>
+          {% endif %}
 
-      {% if config.atom %}
-        <p>
-          The feed is available via
-          <a href="{{ config.atom }}">atom</a>.
-        </p>
-        <br>
-      {% endif %}
+          {% if config.atom %}
+            <p>
+              The feed is available via
+              <a href="{{ config.atom }}">atom</a>.
+            </p>
+            <br>
+          {% endif %}
 
-      <aside>
-        <h2>Categories</h2>
-        {% if categoriesList %}
-          {% autoescape false %}{{ categoriesList }}{% endautoescape %}
-        {% else %}
-          <p>None.</p>
-        {% endif %}
-      </aside>
-      <br>
+          <aside>
+            <h2 class="Archive__typeTitle">Categories</h2>
+            {% if categoriesList %}
+              {% autoescape false %}{{ categoriesList }}{% endautoescape %}
+            {% else %}
+              <p>None.</p>
+            {% endif %}
+          </aside>
+          <br>
 
-      <aside>
-        <h2>Tags</h2>
-        {% if tagsList %}
-          {% autoescape false %}{{ tagsList }}{% endautoescape %}
-        {% else %}
-          <p>None.</p>
-        {% endif %}
-      </aside>
-      <br>
+          <aside>
+            <h2 class="Archive__typeTitle">Tags</h2>
+            {% if tagsList %}
+              {% autoescape false %}{{ tagsList }}{% endautoescape %}
+            {% else %}
+              <p>None.</p>
+            {% endif %}
+          </aside>
+          <br>
 
-      <aside>
-        <h2>Archives</h2>
-        {% if archivesList %}
-          {% autoescape false %}{{ archivesList }}{% endautoescape %}
-        {% else %}
-          <p>None.</p>
-        {% endif %}
-      </aside>
+          <aside>
+            <h2 class="Archive__typeTitle">Archives</h2>
+            {% if archivesList %}
+              {% autoescape false %}{{ archivesList }}{% endautoescape %}
+            {% else %}
+              <p>None.</p>
+            {% endif %}
+          </aside>
+        </div>
+      </div>
     </div>
   {% else %}
-    <h1>{{ page.month + '/' + page.year }}</h1>
-    {% for postItem in page.posts.toArray() %}
-      <div class="archive-item">
-        {% if postItem.link %}
-          <!-- external link -->
-          <a href="{{ url_for(postItem.link) }}" target="_blank">
-            {{ postItem.title || 'No Title' }}
-          </a>
-        {% endif %}
+    <header class="Archive__header">
+      <h1 class="Archive__title">{{ date( page.month, 'MMMM') }} {{ page.year }}</h1>
+    </header>
+    <div class="Archive__body">
+      <div class="Archive__content">
+        {% for postItem in page.posts.toArray() %}
+          <div class="archive-item">
+            {% if postItem.link %}
+              <!-- external link -->
+              <a href="{{ url_for(postItem.link) }}" target="_blank">
+                {{ postItem.title || 'No Title' }}
+              </a>
+            {% endif %}
 
-        {% if !postItem.link %}
-          <!-- internal link -->
-          <a href="{{ url_for(postItem.path) }}">
-            {{ postItem.title || 'No Title' }}
-          </a>
-        {% endif %}
+            {% if !postItem.link %}
+              <!-- internal link -->
+              <a href="{{ url_for(postItem.path) }}">
+                {{ postItem.title || 'No Title' }}
+              </a>
+            {% endif %}
 
-        <time datetime="{{ date_xml(postItem.date) }}">
-          {{ date(postItem.date) }}
-        </time>
+            <time datetime="{{ date_xml(postItem.date) }}">
+              {{ date(postItem.date) }}
+            </time>
+          </div>
+        {% endfor %}
       </div>
-    {% endfor %}
+    </div>
   {% endif %}
 
   {% include 'includes/pagination.swig' %}
