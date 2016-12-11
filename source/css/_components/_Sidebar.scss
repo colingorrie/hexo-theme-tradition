@@ -1,8 +1,12 @@
 .Sidebar {
 
-  @media #{$tablet} {
-    float: right;
-    width: 25%;
+  border: 1px solid black;
+
+  @media #{$desktop} {
+    flex: 1;
+    margin: 1em 0;
+    // float: left;
+    // width: 25%;
   }
-  
+
 }
