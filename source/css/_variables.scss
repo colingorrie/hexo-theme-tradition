@@ -5,13 +5,20 @@ $sans: $reem-kufi;
 $serif: $crimson-text;
 $monospace: "Inconsolata", monospace;
 
+// font sizes
+$base-font-size: 20px;
+$h1: 3.157em;
+$h2: 2.369em;
+$h3: 1.777em;
+$h4: 1.333em;
+$h5: 0.88em;
+
 // colours
 $dark-blue: #2b4c8f;
 $dark-grey: #4d4e4e;
 $dark-red: #8d1104;
 $light-grey: #edeff0;
 $white: #fff;
-
 
 // breakpoints
 $tablet: "(min-width: 768px)";
