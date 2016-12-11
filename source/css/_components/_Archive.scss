@@ -11,6 +11,10 @@
     @include page-content();
   }
 
+  &__type {
+    margin-bottom: 1em;
+  }
+
   &__typeTitle {
     font-size: 1.777em;
   }
