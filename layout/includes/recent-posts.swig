@@ -2,7 +2,7 @@
 {% if site.posts.length > 0 %}
   <div id="recent-posts" class="RecentPosts">
     <header class="RecentPosts__header">
-      <h1 class="RecentPosts__title">All Posts</h1>
+      <h1 class="RecentPosts__title">Blog</h1>
     </header>
     {% for postItem in site.posts.toArray() %}
       <article class="recent-post-item PostExcerpt">
