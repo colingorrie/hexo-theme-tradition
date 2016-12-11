@@ -87,7 +87,7 @@
   {% endfor %}
 {% endif %}
 
-{% if theme.disqus_shortname && page.is_post() %}
+{% if theme.disqus_shortname && is_post() %}
   <script type="text/javascript">
     var disqus_shortname = '{{ theme.disqus_shortname }}';
 

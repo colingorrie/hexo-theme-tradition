@@ -1,7 +1,8 @@
 {% extends 'includes/layout.swig' %}
 
 {% block header %}
-  <header class="Post__header">
+  <header class="Post__header"
+          style="{% if page.image %}background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{ page.image }});{% endif %}">
     <h1 class="Post__title">{{ page.title }}</h1>
     <p class="Post__author">{{ page.author }}</p>
     <p class="Post__date">

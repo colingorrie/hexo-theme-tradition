@@ -2,6 +2,8 @@
   &__header {
     align-items: center;
     background-color: $dark-red;
+    background-position: center center;
+    background-size: cover;
     color: $white;
     display: flex;
     flex-direction: column;
