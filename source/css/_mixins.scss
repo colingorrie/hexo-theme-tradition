@@ -27,6 +27,8 @@
 }
 
 @mixin page-content() {
+  margin-bottom: 2em;
+  
   @media #{$desktop} {
     flex: 3;
     padding: 1em 30px;
