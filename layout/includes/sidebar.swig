@@ -1,3 +1,3 @@
 <div class="Sidebar">
-  Hi
+  {% include 'profile.swig' %}
 </div>

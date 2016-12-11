@@ -9,6 +9,10 @@ menu:
   Contact: /contact
   Archives: /archives
 
+# author profile
+profile:
+  image: /img/profile-250x250.jpg
+
 # Miscelaneous
 favicon: /favicon.ico
 
@@ -17,6 +21,7 @@ stylesheets:
 - https://yui-s.yahooapis.com/pure/0.6.0/pure-min.css
 - https://yui-s.yahooapis.com/pure/0.6.0/grids-responsive-min.css
 - https://fonts.googleapis.com/css?family=Reem+Kufi|Crimson+Text:400,400i|Sorts+Mill+Goudy:400,400i
+- https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
 - /css/tradition.css
 
 # scripts loaded in the end of the body

@@ -1,0 +1,22 @@
+.Profile {
+  text-align: center;
+
+  &__title {
+    font-size: 1.5em;
+    margin: 0;
+  }
+
+  &__image {
+    border-radius: 50%;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    max-width: 90%;
+  }
+
+  &__socialLinks {
+    li {
+      list-style-type: none;
+    }
+  }
+}
