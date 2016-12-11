@@ -1,5 +1,4 @@
-
-{% set pageTitle = page.title || config.subtitle || '' %}
+{% set pageTitle = page.title || config.subtitle || 'Blog' %}
 
 {% if is_archive() %}
   {% set pageTitle = 'Archives' %}
@@ -38,7 +37,7 @@
   {% set className = "Index" %}
 {% endif %}
 
-{% set pageTitle = pageTitle + ' [ ' + config.title + ' ]' %}
+{% set pageTitle = pageTitle + ' | ' + config.title %}
 
 <!doctype html>
 <html lang="{{ config.language }}">
