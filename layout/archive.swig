@@ -66,7 +66,7 @@
       <div class="Archive__body">
         <div class="Archive__content">
           {% for postItem in page.posts.toArray() %}
-          <article class="recent-post-item PostExcerpt">
+          <article class="PostExcerpt">
             <header class="PostExcerpt__header">
               <a href="{{ config.root }}{{ postItem.path }}" class="PostExcerpt__title">{{ postItem.title }}</a>
             </header>
