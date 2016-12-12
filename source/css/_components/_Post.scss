@@ -52,5 +52,9 @@
 
   &__content {
     @include page-content();
+
+    #footnotes {
+      margin-bottom: 1em;
+    }
   }
 }
