@@ -88,6 +88,47 @@
     }
   }
 
+  .markdown-content ol {
+    counter-reset: li;
+    display: table;
+    margin-bottom: 1em;
+
+    & > li {
+      display: table-row;
+      position: relative;
+
+      &:before {
+        color: $medium-grey;
+        content: counter(li) ".";
+        counter-increment: li;
+        display: table-cell;
+        font-size: 18px;
+        padding-right: 1em;
+        text-align: right;
+      }
+    }
+  }
+
+  .markdown-content ul {
+    display: table;
+    margin-bottom: 1em;
+
+    & > li {
+      display: table-row;
+      position: relative;
+
+      &:before {
+        color: $medium-grey;
+        content: "♠";
+        display: table-cell;
+        font-size: 18px;
+        padding-right: 1em;
+        text-align: right;
+        -webkit-transform: translate(-30%, 30%) rotate(90deg);
+      }
+    }
+  }
+
   .chinese {
     // font-size: 20px;
     line-height: 1.7;

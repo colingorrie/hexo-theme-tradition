@@ -27,26 +27,6 @@ a {
   display: none;
 }
 
-ol {
-  counter-reset: li;
-  display: table;
-  margin-bottom: 1em;
-
-  & > li {
-    display: table-row;
-    position: relative;
-
-    &:before {
-      color: $medium-grey;
-      content: counter(li) ".";
-      counter-increment: li;
-      display: table-cell;
-      padding-right: 1em;
-      text-align: right;
-    }
-  }
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-family: $sans;
   line-height: 1.2;

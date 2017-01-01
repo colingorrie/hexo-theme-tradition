@@ -19,7 +19,9 @@
 
 {% block body %}
   {% include 'includes/categories.swig' %}
+  <div class="markdown-content">
   {% autoescape false %}{{ page.content }}{% endautoescape %}
+  </div>
   {% include 'includes/tags.swig' %}
   {% include 'includes/pagination.swig' %}
   {% include 'includes/comments.swig' %}
