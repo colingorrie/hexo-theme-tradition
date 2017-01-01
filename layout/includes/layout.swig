@@ -76,7 +76,7 @@
   </div>
 
   <div id="bottom-outer" class="pure-u-1 Footer">
-    &copy; 2016 {{ config.author }} 
+    &copy; 2017 {{ config.author }} 
   </div>
 </div>
 
