@@ -3,7 +3,7 @@
     <h2 class="RecentPosts__title">Recent Posts</h1>
   </header>
 
-  {% for postItem in site.posts.toArray() %}
+  {% for postItem in site.posts %}
     <article class="recent-post-item PostExcerpt">
       <header class="PostExcerpt__header">
         <a href="{{ config.root }}{{ postItem.path }}" class="PostExcerpt__title">{{ postItem.title }}</a>
@@ -22,7 +22,7 @@
       </div>
       {% if postItem.excerpt %}
         <div class="PostExcerpt__excerpt">
-          {{ postItem.excerpt }} <a href="{{ config.root }}{{ postItem.path }}" class="PostExcerpt__readMore">Continue Reading</a> »
+          {{ postItem.excerpt }} <a href="{{ config.root }}{{ postItem.path }}" class="PostExcerpt__readMore">More...</a>
         </div>
       {% endif %}
     </article>
