@@ -76,7 +76,8 @@
   </div>
 
   <div id="bottom-outer" class="pure-u-1 Footer">
-    &copy; 2017 {{ config.author }} 
+    <p>&copy; 2017 {{ config.author }}</p>
+    <p>Powered by <a href="http://www.pumpkinseed.io" target="_blank">Pumpkinseed.io</a></p>
   </div>
 </div>
 
