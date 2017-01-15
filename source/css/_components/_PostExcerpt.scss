@@ -7,7 +7,7 @@
   &__title {
     color: $dark-red;
     font-family: $sans;
-    font-size: 1.3em;
+    font-size: $h4;
     line-height: 1.5;
     text-decoration: none;
     text-transform: uppercase;
@@ -15,7 +15,7 @@
 
   &__date, &__author {
     font-style: italic;
-    font-size: 0.888em;
+    font-size: $h5;
     letter-spacing: 0;
     margin: .2em 0 .5em;
   }

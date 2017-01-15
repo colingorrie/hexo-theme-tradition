@@ -2,7 +2,7 @@
   background-color: $dark-red;
   color: $white;
   font-family: $sans;
-  padding: 0.7em 0 0.4em;
+  padding: 0.7em 0 0.5em;
   text-align: center;
   text-transform: uppercase;
   width: 100%;
@@ -14,6 +14,25 @@
   h1 {
     margin: 0.67em 0;
     font-size: 2em;
+    margin: 0;
+  }
+}
+
+@mixin section-header() {
+  background-color: $white;
+  color: $dark-grey;
+  font-family: $sans;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+
+  @media #{$tablet} {
+    font-size: 1.333em;
+  }
+
+  h2 {
+    margin: 0.67em 0;
+    font-size: 1.777em;
     margin: 0;
   }
 }
@@ -51,27 +70,6 @@
     font-weight: 700;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    line-height: 1.2;
-    margin-bottom: 0.2em;
-  }
-
-  h1 {
-    font-size: 3.157em;
-  }
-
-  h2 {
-    font-size: 2.369em;
-  }
-
-  h3 {
-    font-size: 1.777em;
-  }
-
-  h4 {
-    font-size: 1.333em;
-  }
-
   table {
     border-collapse: collapse;
     margin: 0 auto;
@@ -87,6 +85,47 @@
 
     .gutter {
       display: none;
+    }
+  }
+
+  .markdown-content ol {
+    counter-reset: li;
+    display: table;
+    margin-bottom: 1em;
+
+    & > li {
+      display: table-row;
+      position: relative;
+
+      &:before {
+        color: $medium-grey;
+        content: counter(li) ".";
+        counter-increment: li;
+        display: table-cell;
+        font-size: 18px;
+        padding-right: 1em;
+        text-align: right;
+      }
+    }
+  }
+
+  .markdown-content ul {
+    display: table;
+    margin-bottom: 1em;
+
+    & > li {
+      display: table-row;
+      position: relative;
+
+      &:before {
+        color: $medium-grey;
+        content: "♠";
+        display: table-cell;
+        font-size: 18px;
+        padding-right: 1em;
+        text-align: right;
+        -webkit-transform: translate(-30%, 30%) rotate(90deg);
+      }
     }
   }
 

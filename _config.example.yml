@@ -1,4 +1,3 @@
-
 # html lang
 language: en
 
@@ -7,13 +6,14 @@ menu:
   Home: /
   About: /about
   Archives: /archives
+  Talks: /talks
 
 # author profile
 profile:
-  description: C.F. Gorrie is a linguist and software developer in Hamilton, ON.
-  image: /images/profile-250x250.jpg
+  description:
+  image:
   social:
-    twitter: cfgorrie
+    twitter: 
 
 # Miscelaneous
 favicon: /favicon.ico
@@ -29,3 +29,9 @@ stylesheets:
 # scripts loaded in the end of the body
 scripts:
 - /js/tradition.js
+
+# disqus
+disqus_shortname:
+
+# google analytics
+google_analytics:

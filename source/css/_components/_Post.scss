@@ -22,17 +22,17 @@
 
     h1 {
       font-family: $sans;
-      font-size: 20px;
+      font-size: $h4;
       margin: 0.67em 0;
       text-transform: uppercase;
       width: 80%;
 
       @media #{$tablet} {
-        font-size: 32px;
+        font-size: $h3;
       }
 
       @media #{$desktop} {
-        font-size: 45px;
+        font-size: $h2;
       }
     }
 
@@ -40,8 +40,8 @@
       font-style: italic;
       margin: 0.1em 0;
 
-      @media #{$tablet} {
-        font-size: 25px;
+      @media #{$desktop} {
+        font-size: $h4;
       }
     }
   }
@@ -52,5 +52,9 @@
 
   &__content {
     @include page-content();
+
+    #footnotes {
+      margin-bottom: 1em;
+    }
   }
 }
